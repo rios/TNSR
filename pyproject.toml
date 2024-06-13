@@ -1,0 +1,14 @@
+[project]
+name = "Transaprent-Neural-Surface-Refinement"
+version = "0.1.1"
+
+dependencies=[
+    "nerfstudio>=0.3.3"
+]
+
+[tool.setuptools.packages.find]
+include = ["tnsr*"]
+
+[project.entry-points.'nerfstudio.method_configs']
+tnsr_initial = 'tnsr.tnsr_config:tnsr_initial'
+tnsr_refine = 'tnsr.tnsr_config:tnsr_refine'
