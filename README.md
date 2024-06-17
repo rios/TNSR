@@ -1,5 +1,5 @@
 # Differentiable Neural Surface Refinement for Transparent Objects
-## [[Paper]](https://weijiandeng.xyz/NSR/) [[CVPR'24 Project]](https://tnsr.rios.ai)
+## [[Paper]](https://openaccess.thecvf.com/content/CVPR2024/papers/Deng_Differentiable_Neural_Surface_Refinement_for_Modeling_Transparent_Objects_CVPR_2024_paper.pdf) [[CVPR'24 Project]](https://tnsr.rios.ai)
 <img src="./files/teaser.png" alt="Teaser Image" width="60%">
 
 ### PyTorch Implementation of Transparent Neural Surface Refinement (TNSR)
