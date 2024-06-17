@@ -50,9 +50,7 @@ ns-viewer is helpful in defining the cuboid below.
 1. Clone this repo
 
    ```
-   git clone https://github.com/rios-ai/anu_nerf.git
-   
-   git checkout tnsr
+   git clone https://github.com/rios/anu_nerf.git
    ```
 
 2. Install this repo as a python package
