@@ -105,7 +105,7 @@ ns-viewer is helpful in defining the cuboid below.
           --scale_factor 0.1
           # Note: wandb is optional
    
-   - Step 2: learn an initial surface with NeuS
+   - Step 2: refine the initial surface
       <details>
       <summary>Please specify the weight path for the step 1: ```--load-checkpoint```</summary>
    
