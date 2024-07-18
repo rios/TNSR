@@ -26,20 +26,22 @@ class TNSRPipeline(VanillaPipeline):
         self,
         config: TNSRPipelineConfig,
         device: str,
-        test_mode: Literal["test", "val", "inference"] = "val",
+        test_mode: Literal["test", "val", "inference"] = "test",
         world_size: int = 1,
         local_rank: int = 0,
         grad_scaler: Optional[GradScaler] = None,
     ):
         super().__init__(config, device, test_mode, world_size, local_rank)
 
-    def load_pipeline(self, loaded_state: Dict[str, Any]) -> None:
+    def load_pipeline(self, loaded_state: Dict[str, Any], step: int) -> None:
         """Load the checkpoint from the given path
 
         Args:
             loaded_state: pre-trained model state dict
+            step: training step of the loaded checkpoint
         """
         state = {
             (key[len("module.") :] if key.startswith("module.") else key): value for key, value in loaded_state.items()
         }
+        # self.model.update_to_step(step)
         self.load_state_dict(state)
